@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  mongodb:
+    image: mongo:5.0
+    container_name: ob-mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - ~/apps/mongo:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=docker
+      - MONGO_INITDB_ROOT_PASSWORD=docker
